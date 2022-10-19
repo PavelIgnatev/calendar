@@ -1,0 +1,36 @@
+@import 'src/assets/design/colors.scss';
+@import 'src/assets/design/media.scss';
+
+.base-pill {
+  border: 0;
+  width: 100%;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  height: 24px;
+  padding: 3px 4px;
+  cursor: pointer;
+  color: $tangerine;
+  background-color: $lightOrange;
+  border-radius: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 6px;
+
+  @include bigTabletAndLess {
+    height: 18px;
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  @include smallTabletAndLess {
+    width: 10px;
+    height: 10px;
+    margin-top: 0;
+    border-radius: 50%;
+    background-color: $tangerine;
+    font-size: 0;
+    line-height: 0;
+  }
+}

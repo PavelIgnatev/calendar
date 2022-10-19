@@ -1,0 +1,50 @@
+@import 'src/assets/design/colors.scss';
+@import 'src/assets/design/media.scss';
+
+.base-circle-day {
+  border-radius: 50px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+
+  &_next {
+    color: $grayish;
+  }
+
+  &_weekends {
+    color: $acidGreen;
+  }
+
+  &_prev {
+    color: $heather;
+  }
+
+  &_now {
+    color: $white;
+    background-color: $employmentBlue;
+  }
+
+  &_checked {
+    color: $white;
+    background-color: $acidGreen;
+  }
+
+  @include bigTabletAndLess {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    line-height: 20px;
+    
+  }
+
+  @include smallTabletAndLess {
+    width: 26px;
+    height: 26px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

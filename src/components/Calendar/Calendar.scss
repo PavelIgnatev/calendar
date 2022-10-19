@@ -1,0 +1,261 @@
+@import "src/assets/design/colors.scss";
+@import "src/assets/design/media.scss";
+
+.calendar {
+  &__wrapper {
+    justify-content: space-between;
+    display: flex;
+
+    @include bigTabletAndLess {
+      flex-direction: column;
+    }
+  }
+
+  &__body {
+    &-pill {
+      @include smallTabletAndLess {
+        font-size: 0;
+        line-height: 0;
+      }
+    }
+  }
+
+  &__content {
+    flex: 1;
+    margin-right: 30px;
+
+    @include bigTabletAndLess {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 38px;
+
+    @include bigTabletAndLess {
+      font-size: 28px;
+      line-height: 30px;
+    }
+
+    @include smallTabletAndLess {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+
+  &__table {
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid $atomWhite;
+    border-radius: 8px;
+
+    &-head,
+    &-body {
+      display: flex;
+      width: 100%;
+    }
+
+    &-body {
+      border-radius: 8px;
+
+      &_ceil {
+        width: calc(100% / 7);
+        border-radius: 0;
+        border-top-width: 2px;
+        cursor: pointer;
+        padding: 12px;
+        min-height: 90px;
+        border: 1px solid $atomWhite;
+        border-bottom-width: 0;
+        border-left-width: 0;
+        min-height: 140px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &:last-child {
+          border-right-width: 0;
+        }
+
+        @include bigTabletAndLess {
+          min-height: 100px;
+          padding: 10px;
+        }
+
+        @include smallTabletAndLess {
+          min-height: 55px;
+          display: flex;
+          align-items: center;
+          padding: 8px;
+          flex-direction: initial;
+          align-items: center;
+        }
+
+        @include smallPhoneAndLess {
+          flex-direction: column;
+        }
+      }
+
+      &:last-child {
+        .calendar__table-body {
+          border-bottom-width: 0;
+
+          &:first-child {
+            border-bottom-left-radius: 8px;
+          }
+
+          &:last-child {
+            border-bottom-right-radius: 8px;
+            border-right-width: 0;
+          }
+        }
+      }
+
+      &:first-child {
+        .calendar__table-body {
+          display: none;
+          border-top-width: 1px;
+
+        }
+      }
+    }
+
+    &-head {
+      &_ceil {
+        padding: 18px 19px;
+        display: flex;
+        align-items: center;
+        border: 1px solid $atomWhite;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 23px;
+        color: $grayish;
+        text-transform: uppercase;
+        border-top-width: 0;
+        border-left-width: 0;
+        border-bottom-width: 0;
+
+        &:first-child {
+          border-top-left-radius: 8px;
+        }
+
+        &:last-child {
+          border-top-right-radius: 8px;
+          border-right-width: 0;
+        }
+
+        @include bigTabletAndLess {
+          font-size: 16px;
+          line-height: 20px;
+          padding: 15px 16px;
+        }
+
+        @include smallTabletAndLess {
+          font-size: 14px;
+          line-height: 20px;
+          padding: 8px;
+        }
+
+        @include smallPhoneAndLess {
+          padding: 4px;
+        }
+      }
+    }
+  }
+
+  &__form {
+    padding: 20px;
+    border: 1px solid $atomWhite;
+    border-radius: 8px;
+    max-width: 330px;
+
+    @include bigTabletAndLess {
+      max-width: 100%;
+    }
+
+
+    &-title {
+      margin: 0;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 20px;
+    }
+
+    &-input {
+      margin-bottom: 15px;
+    }
+
+    &-textarea {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__slider {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 13px;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+
+    &-wrapper {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 28px;
+      color: $lightBlack;
+      display: flex;
+
+      @include bigTabletAndLess {
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      @include smallTabletAndLess {
+        font-size: 18px;
+        line-height: 28px;
+      }
+    }
+
+    @include bigTabletAndLess {
+      margin-bottom: 20px;
+    }
+
+    @include smallTabletAndLess {
+      margin-bottom: 15px;
+    }
+
+    &-year {
+      margin-left: 10px;
+    }
+
+    &-prev,
+    &-next {
+      position: relative;
+      cursor: pointer;
+      height: 24px;
+      width: 24px;
+
+      &:before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border: solid $grayish;
+        border-width: 2px 0 0 2px;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+      }
+    }
+
+    &-next {
+      &:before {
+        transform: translate(-50%, -50%) rotate(135deg);
+      }
+    }
+  }
+}

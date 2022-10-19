@@ -1,0 +1,23 @@
+@import 'src/assets/design/colors.scss';
+
+.base-input {
+  color: $lightBlack;
+  background-color: $tiara;
+  border: 1px solid $atomWhite;
+  font-size: 14px;
+  line-height: 21px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  width: 100%;
+  transition: 0.2s all ease-in-out;
+
+  &:active,
+  &:focus {
+    border: 1px solid $lightBlue;
+    background: $white;
+  }
+
+  &::placeholder {
+    color: $lightGray;
+  }
+}

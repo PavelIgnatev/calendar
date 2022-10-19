@@ -1,0 +1,49 @@
+@import 'constants';
+
+@mixin mediaMaxWidth($width) {
+    @media screen and (max-width: $width) {
+        @content;
+    }
+}
+
+@mixin mediumScreenAndLess {
+    @include mediaMaxWidth($wideScreen - 1px) {
+        @content;
+    }
+}
+
+@mixin smallScreenAndLess {
+    @include mediaMaxWidth($mediumScreen - 1px) {
+        @content;
+    }
+}
+
+@mixin bigTabletAndLess {
+    @include mediaMaxWidth($smallScreen - 1px) {
+        @content;
+    }
+}
+
+@mixin tabletAndLess {
+    @include mediaMaxWidth($bigTabletScreen - 1px) {
+        @content;
+    }
+}
+
+@mixin smallTabletAndLess {
+    @include mediaMaxWidth($tabletScreen - 1px) {
+        @content;
+    }
+}
+
+@mixin phoneAndLess {
+    @include mediaMaxWidth($smallTabletScreen - 1px) {
+        @content;
+    }
+}
+
+@mixin smallPhoneAndLess {
+    @include mediaMaxWidth($phoneScreen - 1px) {
+        @content;
+    }
+}
