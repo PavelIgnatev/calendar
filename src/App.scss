@@ -1,0 +1,9 @@
+@import 'src/assets/design/media.scss';
+
+.app {
+    padding: 30px;
+
+    @include smallPhoneAndLess {
+        padding: 10px;
+    }
+}

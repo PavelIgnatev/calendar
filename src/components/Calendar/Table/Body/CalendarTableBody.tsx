@@ -4,11 +4,12 @@ import moment from 'moment';
 
 import { b } from '../../Calendar';
 import BaseCircleDay from '../../../BaseCircleDay';
-import CalendarContext, {
+import {
   FORMAT_ISO,
   FORMAT_ISO_8601,
-} from '../../context/context';
+} from '../../../../shared/constants/calendar';
 import BasePill from '../../../BasePill';
+import CalendarContext from '../../context/context';
 
 export interface CalendarTableBodyProps {
   daysOfWeek: Array<string>;
@@ -67,7 +68,7 @@ const CalendarTableBody = (props: CalendarTableBodyProps) => {
             <div className={b('body-pill')}>
               {Object.keys(pills ?? {}).map((id) => (
                 <BasePill key={id} id={id} day={day} onClick={handlePillClick}>
-                  {pills?.[id]?.subtitle}
+                  {pills?.[id]?.title}
                 </BasePill>
               ))}
             </div>

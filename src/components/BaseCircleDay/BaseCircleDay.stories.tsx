@@ -2,7 +2,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import BaseCircleDay from '.';
-import getDate from '../../helpers/getDate';
+import getDate from '../../shared/helpers/getDate';
 
 export default {
   title: 'UI components/BaseCircleDay',

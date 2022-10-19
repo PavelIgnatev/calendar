@@ -48,7 +48,7 @@ const CalendarForm = (props: CalendarFormProps) => {
         });
         setCalendarStateForm({
           ...calendarStateForm,
-          subtitle: '',
+          title: '',
           description: '',
         });
       }
@@ -66,10 +66,10 @@ const CalendarForm = (props: CalendarFormProps) => {
         onChange={handleChangeCalendarStateForm}
       />
       <BaseInput
-        name="subtitle"
+        name="title"
         className={b('form-input')}
         placeholder="Укажите краткое название"
-        value={calendarStateForm.subtitle}
+        value={calendarStateForm.title}
         onChange={handleChangeCalendarStateForm}
       />
       <BaseTextarea

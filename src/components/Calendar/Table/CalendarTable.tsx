@@ -2,13 +2,14 @@ import React, { useContext } from 'react';
 import cx from 'classnames';
 
 import { b } from '../Calendar';
-import useCalendarDaysOfWeek from '../../../hooks/useCalendarDaysOfWeek';
+import useCalendarDaysOfWeek from '../../../shared/hooks/useCalendarDaysOfWeek';
 import CalendarTableHead from './Head';
 import CalendarTableBody from './Body';
-import CalendarContext, {
+import {
   INITIAL_MONTH,
   INITIAL_YEAR,
-} from '../context/context';
+} from '../../../shared/constants/calendar';
+import CalendarContext from '../context/context';
 
 export interface CalendarTableProps {
   className?: string;

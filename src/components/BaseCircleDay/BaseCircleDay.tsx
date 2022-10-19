@@ -2,7 +2,7 @@ import React from 'react';
 import moment from 'moment';
 import b_ from 'b_';
 
-import getDate from '../../helpers/getDate';
+import getDate from '../../shared/helpers/getDate';
 
 import './BaseCircleDay.scss';
 

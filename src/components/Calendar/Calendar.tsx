@@ -6,10 +6,8 @@ import b_ from 'b_';
 import CalendarSlider from './Slider';
 import CalendarTable from './Table';
 import CalendarForm from './Form';
-import CalendarContext, {
-  CalendarState,
-  DEFAULT_CALENDAR_STATE_FORM,
-} from './context/context';
+import CalendarContext, { CalendarState } from './context/context';
+import { DEFAULT_CALENDAR_STATE_FORM } from '../../shared/constants/calendar';
 
 import './Calendar.scss';
 

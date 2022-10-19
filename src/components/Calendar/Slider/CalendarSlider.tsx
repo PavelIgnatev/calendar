@@ -3,12 +3,13 @@ import moment from 'moment';
 import cx from 'classnames';
 
 import { b } from '../Calendar';
-import CalendarContext, {
+import CalendarContext from '../context/context';
+import {
   FORMAT_ISO_8601,
   INITAL_DATE,
   INITIAL_MONTH,
   INITIAL_YEAR,
-} from '../context/context';
+} from '../../../shared/constants/calendar';
 
 export interface CalendarSliderProps {
   className?: string;
