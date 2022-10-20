@@ -11,7 +11,7 @@ const useCalendarDaysOfWeek = (year: number, month: number) => {
 
   const endDate = moment([year, month]).clone().endOf('month');
 
-  const day = startDate.clone().subtract(1, 'day');
+  const day = startDate.clone().add(6, 'day');
 
   while (day.isBefore(endDate, 'day')) {
     calendar.push(
